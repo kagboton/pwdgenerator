@@ -50,11 +50,11 @@ export class AppComponent {
     this.includeLetters = !this.includeLetters;
   }
 
-  onChangeNumbers() {
+  onChangeUseNumbers() {
     this.includeNumbers = !this.includeNumbers;
   }
 
-  onChangeSymbols() {
+  onChangeUseSymbols() {
     this.includeSymbols = !this.includeSymbols;
   }
 }
