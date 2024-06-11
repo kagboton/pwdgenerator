@@ -9,6 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  length = 0;
   generatedPassword: string = '';
   includeLetters: boolean = false;
   includeNumbers: boolean = false;
@@ -21,6 +22,12 @@ export class AppComponent {
       Include N ? : ${this.includeNumbers}
       Include S ? : ${this.includeSymbols}
     `);
+  }
+
+  onChangeLength(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const parsedValue = parseInt(target.value)
+    this.length = isNaN(parsedValue) ? 0 : parsedValue;
   }
 
   onChangeUseLetters() {
