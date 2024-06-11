@@ -18,7 +18,7 @@ export class AppComponent {
     this.generatedPassword = 'My password';
     console.log(`
       Include Letters ? : ${this.includeLetters}
-      Include N ? : ${this.includeNumbers};
+      Include N ? : ${this.includeNumbers}
       Include S ? : ${this.includeSymbols}
     `);
   }
