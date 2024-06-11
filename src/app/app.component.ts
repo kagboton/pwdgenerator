@@ -10,18 +10,34 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   length = 0;
-  generatedPassword: string = '';
+  password: string = '';
   includeLetters: boolean = false;
   includeNumbers: boolean = false;
   includeSymbols: boolean = false;
 
   onButtonClick() {
-    this.generatedPassword = 'My password';
-    console.log(`
-      Include Letters ? : ${this.includeLetters}
-      Include N ? : ${this.includeNumbers}
-      Include S ? : ${this.includeSymbols}
-    `);
+    const numbers = '0123456789'
+    const letters = 'abcdefghijklmnopqrstuvwxyz'
+    const symbols = '!@#$%^&*()_+';
+
+    let validChars: string = '';
+    if (this.includeLetters) {
+      validChars += letters;
+    }
+    if (this.includeNumbers) {
+      validChars += numbers;
+    }
+    if (this.includeSymbols) {
+      validChars += symbols;
+    }
+
+    let generatedPassword: string = '';
+    for (let i = 0; i < this.length; i++) {
+      const randomIndex = Math.floor(Math.random() * validChars.length);
+      generatedPassword += validChars[randomIndex];
+    }
+
+    this.password =  generatedPassword;
   }
 
   onChangeLength(event: Event) {
