@@ -1,5 +1,8 @@
 # Pwdgenerator
 
+A password generator project deployed with now.io and available at : https://pwdgenerator-ten.vercel.app
+Built from Stephen Grider Angular Udemy course : https://www.udemy.com/course/the-modern-angular-bootcamp/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
 ## Development server
