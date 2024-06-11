@@ -9,9 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'pwdgenerator';
+  generatedPassword: string = '';
 
   onButtonClick() {
-    console.log('Button clicked');
+    this.generatedPassword = 'My password';
   }
 }
